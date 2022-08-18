@@ -1,0 +1,30 @@
+<app-libraryadmin></app-libraryadmin>
+<div class="container mt-5">
+    <h2>All Books</h2>
+    <table class="table table-light table-hover">
+        <thead>
+            <tr>
+                <th class="text-center">Book Id</th>
+                <th class="text-center">Book Name</th>
+                <th class="text-center">Author Name</th>
+                <th class="text-center">Count</th>
+                <th class="text-center">Publication Name</th>
+                <th class="text-center">Publication Year</th>
+                <th class="text-center">Operations</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let book of books">
+                <td class="text-center">{{book.bookId}}</td>
+                <td class="text-center">{{book.bookName}}</td>
+                <td class="text-center">{{book.authorName}}</td>
+                <td class="text-center">{{book.countOfCopies}}</td>
+                <td class="text-center">{{book.publicationName}}</td>
+                <td class="text-center">{{book.publicationYear}}</td>
+                <td class="d-md-flex gap-2 justify-content-center">
+                    <button (click) = "deleteBook(book.bookId!)" class = "btn btn-sm btn-danger"> Delete </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

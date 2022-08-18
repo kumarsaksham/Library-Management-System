@@ -1,0 +1,40 @@
+<app-libraryadmin></app-libraryadmin>
+<div class="container">
+    <form #bookNameform="ngForm" (ngSubmit) = "getStudentByBookName(bookNameform)">
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Enter Book Name:</label>
+            <div class="col-sm-2">
+                <input type="text" class ="form-control" id = "bookName" [(ngModel)] ="bookName" name="bookName">
+            </div>
+            <button class="col-sm-2 btn btn-primary"> Search </button>
+        </div>
+    </form>
+    <h2>Book: {{bookName}} borrowed by Students</h2>
+    <div class="container">
+        <h2>Book taken by Users</h2>
+        <table class="table table-light table-hover">
+            <thead>
+                <tr>
+                    <th class="text-center">User Id</th>
+                    <th class="text-center">User Name</th>
+                    <th class="text-center">Email Id</th>
+                    <th class="text-center">Phone No.</th>
+                    <th class="text-center">User Type</th>
+                    <th class="text-center">Password</th>
+                    <th class="text-center">Active status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <td class="text-center">{{user.userId}}</td>
+                    <td class="text-center">{{user.userName}}</td>
+                    <td class="text-center">{{user.emailId}}</td>
+                    <td class="text-center">{{user.phoneNo}}</td>
+                    <td class="text-center">{{user.userType}}</td>
+                    <td class="text-center">{{user.password}}</td>
+                    <td class="text-center">{{user.active}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

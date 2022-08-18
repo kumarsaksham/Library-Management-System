@@ -1,0 +1,27 @@
+<app-student></app-student>
+<div class="container">
+    <h2>Available Books</h2>
+    <table class="table table-light table-hover">
+        <thead>
+            <tr>
+                <th class="text-center">Book Id</th>
+                <th class="text-center">Book Name</th>
+                <th class="text-center">Author Name</th>
+                <th class="text-center">Count</th>
+                <th class="text-center">Publication Name</th>
+                <th class="text-center">Publication Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let book of books">
+                <td class="text-center">{{book.bookId}}</td>
+                <td class="text-center">{{book.bookName}}</td>
+                <td class="text-center">{{book.authorName}}</td>
+                <td class="text-center">{{book.countOfCopies}}</td>
+                <td class="text-center">{{book.publicationName}}</td>
+                <td class="text-center">{{book.publicationYear}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

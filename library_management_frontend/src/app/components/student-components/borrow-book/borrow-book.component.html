@@ -1,0 +1,29 @@
+<app-student></app-student>
+<div class="container col-md-6 offset-md-4 mt-5 mb-3">
+    <h2> Borrow Book </h2>
+    <form #borrowbookform="ngForm" (ngSubmit) = "addBookToUser(borrowbookform)">
+        
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Book Id:</label>
+            <div class="col-sm-4">
+                <input type="text" class ="form-control" id = "bookId" [(ngModel)] ="borrowBoook.bookId" name="bookId">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Issue Date:</label>
+            <div class="col-sm-4">
+                <input type="date" class ="form-control" id = "issuedDate" [(ngModel)] ="borrowBoook.issuedDate" name="issuedDate">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Return Date:</label>
+            <div class="col-sm-4">
+                <input type="date" class ="form-control" id = "returnDate" [(ngModel)] ="borrowBoook.returnDate" name="returnDate">
+            </div>
+        </div>
+
+        <button class = "btn btn-primary col-sm-6" type ="submit">Submit</button>    
+    </form>
+</div>

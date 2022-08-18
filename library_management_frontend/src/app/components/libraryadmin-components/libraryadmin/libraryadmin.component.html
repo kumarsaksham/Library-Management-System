@@ -1,0 +1,42 @@
+<nav class=" container navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/libraryadmin">Library Admin</a>
+
+      <div class="collapse navbar-collapse text-center" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page"  routerLinkActive="active" href="/libraryadmin/books">All Books</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/libraryadmin/borrowedbooks">Books Borrowed By All Users</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/libraryadmin/borrowedbooksbyuser">Books Borrowed By a User</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/libraryadmin/studentbybookname">Book Borrowed by Students</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/libraryadmin/addbook">Add Book</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/libraryadmin/users">Users</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/libraryadmin/adduser">Add User</a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <a class="navbar-brand color-primary" href="">Log Out</a>
+    </div>
+</nav>
+<router-outlet></router-outlet>

@@ -1,0 +1,52 @@
+<app-libraryadmin></app-libraryadmin>
+<div class="container col-md-6 offset-md-4 mt-5 mb-3">
+    <h2> Add Book </h2>
+    <form #bookform="ngForm" (ngSubmit) = "addBook(bookform)">
+        
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label"> Book Id:</label>
+            <div class="col-sm-4">
+                <input type="text" class ="form-control" id = "bookId" [(ngModel)] ="book.bookId" name="bookId">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label"> Book Name:</label>
+            <div class="col-sm-4">
+                <input type="text" class ="form-control" id = "bookName" [(ngModel)] ="book.bookName" name="bookName">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label"> Author Name:</label>
+            <div class="col-sm-4">
+                <input type="text" class ="form-control" id = "authorName" [(ngModel)] ="book.authorName" name="authorName">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label"> Publication Name:</label>
+            <div class="col-sm-4">
+                <input type="text" class ="form-control" id = "publicationName" [(ngModel)] ="book.publicationName" name="publicationName">
+            </div>
+        </div>
+
+
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label"> Publication Year:</label>
+            <div class="col-sm-4">
+                <input type="text" class ="form-control" id = "publicationYear" [(ngModel)] ="book.publicationYear" name="publicationYear">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label"> No of Copies:</label>
+            <div class="col-sm-4">
+                <input type="text" class ="form-control" id = "countOfCopies" [(ngModel)] ="book.countOfCopies" name="countOfCopies">
+            </div>
+        </div>
+
+
+        <button class = "btn btn-primary col-sm-6" type ="submit">Submit</button>    
+    </form>
+</div>

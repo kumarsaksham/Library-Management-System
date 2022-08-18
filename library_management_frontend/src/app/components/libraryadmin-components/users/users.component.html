@@ -1,0 +1,33 @@
+<app-libraryadmin></app-libraryadmin>
+<div class="container">
+    <h2>Users</h2>
+    <table class="table table-sm table-light table-hover">
+        <thead>
+            <tr>
+                <th class="text-center">User Id</th>
+                <th class="text-center">User Name</th>
+                <th class="text-center">Email Id</th>
+                <th class="text-center">Phone No.</th>
+                <th class="text-center">User Type</th>
+                <!-- <th class="text-center">Password</th> -->
+                <th class="text-center">Active status</th>
+                <th class="text-center">Operations</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td class="text-center">{{user.userId}}</td>
+                <td class="text-center">{{user.userName}}</td>
+                <td class="text-center">{{user.emailId}}</td>
+                <td class="text-center">{{user.phoneNo}}</td>
+                <td class="text-center">{{user.userType}}</td>
+                <!-- <td class="text-center">{{user.password}}</td> -->
+                <td class="text-center">{{user.active}}</td>
+                <td class="d-md-flex gap-2 justify-content-center">
+                    <button (click) = "deleteUser(user.userId!)" class = "btn btn-sm btn-danger"> Delete </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
